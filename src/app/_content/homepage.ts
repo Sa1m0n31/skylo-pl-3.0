@@ -122,6 +122,25 @@ const portfolio = [
     }
 ];
 
+const project = [
+    {
+        title: 'Rozmowy i analiza informacji',
+        text: 'W czasie spotkania zbieramy od Ciebie dane, które później analizujemy.'
+    },
+    {
+        title: 'Design i prototypy',
+        text: 'Tworzymy design i przedstawiamy go w formie prototypów do akceptacji.'
+    },
+    {
+        title: 'Kodowanie i testy',
+        text: 'Projekt wdrażamy na serwer testowy, gdzie zbieramy feedback z użytkowania.'
+    },
+    {
+        title: 'Uruchomienie i finalizacja',
+        text: 'Faza deploymentu, w której uruchamiamy Twój projekt na serwerze docelowym.'
+    }
+];
+
 const references = [
     {
         title: 'Paweł z BrunchBox.pl',
@@ -154,9 +173,29 @@ const references = [
 
 const faq = [
     {
-        question: '',
-        answer: ''
+        question: 'Ile będzie kosztować mój projekt?',
+        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
+    },
+    {
+        question: 'Ile będzie kosztować mój projekt?',
+        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
+    },
+    {
+        question: 'Ile będzie kosztować mój projekt?',
+        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
+    },
+    {
+        question: 'Ile będzie kosztować mój projekt?',
+        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
+    },
+    {
+        question: 'Ile będzie kosztować mój projekt?',
+        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
+    },
+    {
+        question: 'Ile będzie kosztować mój projekt?',
+        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
     }
 ]
 
-export { offerGridItems, usp, portfolio, references, faq }
+export { offerGridItems, usp, portfolio, project, references, faq }
