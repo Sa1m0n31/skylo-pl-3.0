@@ -91,6 +91,72 @@ const usp = [
         title: 'Twoje cele - nasza wiedza i doświadczenie',
         text: 'Na swoim konice mamy już dziesiątki projektów i zero niezadowolonych klientów. Jeden krok dzieli Cię od dołączenia do nich i rozwijania swojego biznesu w Internecie.'
     }
+];
+
+const portfolio = [
+    {
+        textBefore: 'Jooob.eu - portal pracy',
+        title: 'Efektywny proces wyszukiwania ofert na portalu pracy',
+        text: 'Stworzyliśmy design oraz wdrożyliśmy platformę umożliwiającą wyszukiwanie kandydatów oraz ofert pracy na rynkach zagranicznych.',
+        link: '/jooob-eu',
+        image1: '/job-portal-1.png',
+        image2: '/job-portal-2.png',
+        image3: '/job-portal-3.png',
+    },{
+        textBefore: 'Brunchbox - katering online',
+        title: 'Wygodny sposób do zamawiania przekąsek online',
+        text: 'Intuicyjny i prosty proces zamówienia oraz customowe opcje zarządzania ofertą w panelu administratora w aplikacji webowej do zamawiania online jedzenia typu finger food.',
+        link: '/brunchbox',
+        image1: '/brunchbox-1.png',
+        image2: '/brunchbox-2.png',
+        image3: '/brunchbox-3.png'
+    },
+    {
+        textBefore: 'Draft4u - platforma z branży sportowej',
+        title: `Draft online dla zawodników i klubów siatkarskich`,
+        text: 'Użyliśmy najbardziej wydajnych i skutecznych technologii, aby zaprogramować aplikację webową z branży sportowej.',
+        link: '/draft4u',
+        image1: '/draft-1.png',
+        image2: '/draft-2.png',
+        image3: '/job-portal-3.png',
+    }
+];
+
+const references = [
+    {
+        title: 'Paweł z BrunchBox.pl',
+        logo: '/logo-brunchbox.png',
+        content: [
+            'Agencja Skylo zbudowała mi stronę od 0 za pomocą języka HTML. Każdy mój pomysł został zrealizowany- bez ograniczeń i dodatkowych płatności jak w przypadku budowania strony na szablonach.',
+            'Chłopaki znają się na robocie. Szybko i profesjonalnie. Świetny kontakt.',
+            'Polecam serdecznie.'
+        ]
+    },
+    {
+        title: 'Krzysztof z Hotic Polska',
+        logo: '/logo-hotic.png',
+        content: [
+            'Jestem bardzo zadowolony. Strona w 100% spełniła moje oczekiwania. ',
+            'Kontakt idealny, pełne zrozumienie tematu, wysoka kreatywność! ',
+            'Czas i cena wykonania projektu to dodatkowo bardzo duży plus. Z czystym sumieniem polecam.'
+        ]
+    },
+    {
+        title: 'Anna z AnnaVinbotti',
+        logo: '/logo-annavinbotti.png',
+        content: [
+            'Świetna agencja. Przemiła współpraca, rzetelna.',
+            'Panowie są w stanie sprostać nawet najbardziej skomplikowanemu zleceniu :)',
+            'Jedna z najlepszych współprac, jakie mieliśmy.'
+        ]
+    }
+];
+
+const faq = [
+    {
+        question: '',
+        answer: ''
+    }
 ]
 
-export { offerGridItems, usp }
+export { offerGridItems, usp, portfolio, references, faq }

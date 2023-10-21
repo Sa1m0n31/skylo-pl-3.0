@@ -1,6 +1,6 @@
 import React from 'react';
 import Image, {ImageProps} from "next/image";
-import arrowIcon from '../_img/arrow-blue.svg';
+import MoreInfoBtn from "@/app/_components/MoreInfoBtn";
 
 interface OfferItemProps {
     icon: ImageProps
@@ -18,15 +18,8 @@ const OfferItem = ({icon, title, text, link}: OfferItemProps) => {
         <p className={'offer__grid__item__text'}>
             {text}
         </p>
-        <a className={'offer__grid__item__link'}
-           href={link}>
-            Więcej informacji
-            <Image src={arrowIcon}
-                   className={'img'}
-                   width={5}
-                   height={5}
-                   alt={'wiecej-informacji'} />
-        </a>
+
+        <MoreInfoBtn link={link} />
     </div>
 };
 

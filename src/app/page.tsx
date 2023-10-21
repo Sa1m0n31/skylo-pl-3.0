@@ -3,6 +3,13 @@ import SiteHeader from "@/app/_components/SiteHeader";
 import HeroSection from "@/app/_components/HeroSection";
 import OfferSection from "@/app/_components/OfferSection";
 import UspSection from "@/app/_components/UspSection";
+import PortfolioSection from "@/app/_components/PortfolioSection";
+import ProjectTimeline from "@/app/_components/ProjectTimeline";
+import References from "@/app/_components/References";
+import Faq from "@/app/_components/FAQ";
+import SimpleForm from "@/app/_components/SimpleForm";
+import Footer from "@/app/_components/Footer";
+import BottomBar from "@/app/_components/BottomBar";
 
 export default function Home() {
   return <>
@@ -10,5 +17,12 @@ export default function Home() {
     <HeroSection />
     <OfferSection />
     <UspSection />
+    <PortfolioSection />
+    <ProjectTimeline />
+    <References />
+    <Faq />
+    <SimpleForm />
+    <Footer />
+    <BottomBar />
   </>
 }
