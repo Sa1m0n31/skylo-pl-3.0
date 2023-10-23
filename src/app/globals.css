@@ -351,6 +351,10 @@ a, button {
   margin: auto;
 }
 
+.container--offer .section--projectTimeline {
+  margin-bottom: 150px;
+}
+
 .project {
   position: relative;
   margin-top: 160px;
@@ -782,6 +786,160 @@ a, button {
 
 .bottomBar__social > a:first-child {
   margin-right: 15px;
+}
+
+.offerPageHeader {
+  background: #F8FAFD;
+  padding: 75px 0;
+  flex-direction: column;
+}
+
+.offerPageHeader__textBefore {
+  color: #C1C1C1;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  width: 90%;
+  margin: auto;
+}
+
+.offerPageHeader__header {
+  font-size: 42px;
+  font-weight: 600;
+  text-align: center;
+  max-width: 862px;
+  margin: 10px auto 50px;
+  width: 90%;
+}
+
+.blue {
+  color: var(--primary);
+}
+
+.offerPageHeader__text {
+  color: #606060;
+  width: 90%;
+  max-width: 872px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.offerPageContent {
+  margin-top: 75px;
+}
+
+.offerPageContent__content,
+.offerPageContent__image {
+  width: 48%;
+}
+
+.offerPageContent__content__block:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.offerPageContent__content__block__header {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.offerPageContent__content__block__text {
+  color: #606060;
+  font-size: 16px;
+  margin-top: 25px;
+}
+
+.offerPagePoints {
+  margin-top: 175px;
+  background: #F8FAFD;
+  padding: 50px 0;
+  flex-direction: column;
+}
+
+.offerPagePoints__header {
+  font-size: 36px;
+  margin: auto;
+  text-align: center;
+}
+
+.offerPagePoints__text {
+  color: #606060;
+  font-size: 16px;
+  text-align: center;
+  max-width: 796px;
+  margin: 25px auto 75px;
+}
+
+.offerPagePoints {
+  flex-direction: column;
+  margin-bottom: 150px;
+}
+
+.offerPagePoints__points {
+  gap: 84px;
+}
+
+.offerPagePoints__item {
+  flex-direction: column;
+}
+
+.offerPagePoints__item > .img {
+  height: 35px;
+  width: auto;
+}
+
+.offerPagePoints__item__header {
+  margin: 24px auto 15px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.offerPagePoints__item__text {
+  color: #606060;
+  font-size: 14px;
+  text-align: center;
+}
+
+.offerPagePoints--simple {
+  background: transparent;
+  align-items: flex-start;
+}
+
+.offerPagePoints--simple .offerPagePoints__header {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.offerPagePoints--simple .offerPagePoints__text {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+.offerPagePoints__simplePoints__item {
+  margin-top: 25px;
+  padding-left: 25px;
+  position: relative;
+  color: #606060;
+  font-size: 20px;
+}
+
+.offerPagePoints__simplePoints__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  width: 10px;
+  height: 10px;
+  border-radius: 1px;
 }
 
 @media(max-width: 1800px) {

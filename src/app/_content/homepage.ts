@@ -37,7 +37,7 @@ const offerGridItems = [
         },
         title: 'Platformy i serwisy internetowe',
         text: 'Skutecznie docieraj do swoich odbiorców i dziel się informacjami za pomocą portali i serwisów internetowych.',
-        link: '/platformy-i-serwisy-internetowe'
+        link: '/platformy-internetowe'
     },
     {
         icon: {
@@ -48,14 +48,14 @@ const offerGridItems = [
         },
         title: 'Platformy e-commerce',
         text: 'Profesjonalne platformy sprzedażowe, stworzone w oparciu o WordPress lub dedykowane oprogramowanie (CMS).',
-        link: '/platformy-e-commerce'
+        link: '/e-commerce'
     },
     {
         icon: {
             src: icon5,
             width: 51,
             height: 51,
-            alt: 'ui-ux-design'
+            alt: 'ui-ui-ux-design-design'
         },
         title: 'UI/UX Design',
         text: 'Tworzymy intuicyjne interfejsy użytkownika, które podnoszą jakość Twojej aplikacji lub strony internetowej.',

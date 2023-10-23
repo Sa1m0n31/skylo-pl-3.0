@@ -15,7 +15,7 @@ const OfferSection = () => {
                 return <OfferItem icon={icon}
                                   title={title}
                                   text={text}
-                                  link={link} />
+                                  link={`/oferta/${link}`} />
             })}
         </div>
     </div>
