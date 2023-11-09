@@ -5,6 +5,9 @@ import { offerGridItems } from "@/app/_content/homepage";
 
 const OfferSection = () => {
     return <div className={'section section--offer w'}>
+        <span className={'anchor'}
+              id={'oferta'}></span>
+
         <SectionHeader textBefore={'Software house - Oferta'}
                        header={'Jakie usługi wykonujemy?'} />
 

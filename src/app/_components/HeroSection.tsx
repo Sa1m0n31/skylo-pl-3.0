@@ -2,6 +2,7 @@ import React from 'react';
 import mainImage from '../_img/main.png';
 import arrowIcon from '../_img/arrow-white.svg';
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
     return <main className={'hero w flex'}>
@@ -18,15 +19,15 @@ const HeroSection = () => {
                 Niezależnie od branży, w której działasz, stworzymy dla Ciebie platformę,
                 która pomoże Ci osiągnąć Twoje cele.
             </p>
-            <a className={'hero__left__btn center'}
+            <Link className={'hero__left__btn center'}
                href={'#darmowa-wycena'}>
                 Darmowa wycena projektu
                 <Image className={'img img--heroLeftBtn'}
-                       width={3}
-                       height={5}
+                       width={6}
+                       height={6}
                        src={arrowIcon}
                        alt={'darmowa-wycena'} />
-            </a>
+            </Link>
         </div>
         <figure className={'hero__right'}>
             <Image className={'img img--heroRight'}

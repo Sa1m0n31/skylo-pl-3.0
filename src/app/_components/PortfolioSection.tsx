@@ -5,6 +5,9 @@ import PortfolioSectionItem from "@/app/_components/PortfolioSectionItem";
 
 const PortfolioSection = () => {
     return <div className={'section section--portfolio w'}>
+        <span className={'anchor'}
+              id={'realizacje'}></span>
+
         <SectionHeader textBefore={'Showcase'}
                        header={'Zobacz jak wykorzystujemy swoje umiejętności w projektach dla Klientów'} />
 

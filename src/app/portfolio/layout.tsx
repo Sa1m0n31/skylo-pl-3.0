@@ -24,7 +24,7 @@ export default function RootLayout({
         <html lang="en">
         <body className={poppins.className}>
         <div className={'container container--portfolio'}>
-            <SiteHeader />
+            <SiteHeader menu={2} />
 
             {children}
 

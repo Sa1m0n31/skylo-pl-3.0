@@ -4,6 +4,7 @@ import SiteHeader from "@/app/_components/SiteHeader";
 import ProjectTimeline from "@/app/_components/ProjectTimeline";
 import SimpleForm from "@/app/_components/SimpleForm";
 import Footer from "@/app/_components/Footer";
+import FAQ from "@/app/_components/FAQ";
 
 const poppins = Poppins({
     subsets: ['latin-ext'],
@@ -23,13 +24,10 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={poppins.className}>
-        <div className={'container container--offer'}>
-            <SiteHeader menu={1} />
-
+        <div className={'container container--contact'}>
+            <SiteHeader menu={-1} />
             {children}
-
-            <ProjectTimeline />
-            <SimpleForm />
+            <FAQ />
             <Footer />
         </div>
         </body>

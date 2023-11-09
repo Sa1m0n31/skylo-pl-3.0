@@ -64,7 +64,7 @@ const PortfolioSectionItem = ({textBefore, title, text, image1, image2, image3, 
                 {text}
             </p>
 
-            <MoreInfoBtn link={link} />
+            <MoreInfoBtn link={`/portfolio${link}`} />
         </div>
 
         <div className={'portfolio__item__right'}>

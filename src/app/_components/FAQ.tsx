@@ -86,7 +86,7 @@ const Faq = () => {
                            header={'Masz pytania? Pozwól nam na nie odpowiedzieć!'} />
 
             <Link className={'btn btn--faq flex'}
-                  href={'#formularz'}>
+                  href={'/kontakt'}>
                 Chcesz wiedzieć więcej? Skontaktuj się!
 
                 <Image src={'/arrow-blue.svg'}

@@ -10,13 +10,15 @@ import Faq from "@/app/_components/FAQ";
 import SimpleForm from "@/app/_components/SimpleForm";
 import Footer from "@/app/_components/Footer";
 import BottomBar from "@/app/_components/BottomBar";
+import TechStack from "@/app/_components/TechStack";
 
 export default function Home() {
   return <>
-    <SiteHeader />
+    <SiteHeader menu={0} />
     <HeroSection />
     <OfferSection />
     <UspSection />
+    <TechStack />
     <PortfolioSection />
     <ProjectTimeline />
     <References />

@@ -14,6 +14,9 @@ const SimpleForm = () => {
     }
 
     return <section className={'section section--simpleForm'}>
+        <span className={'anchor'}
+              id={'darmowa-wycena'}></span>
+
         <div className={'w center'}>
             <h4 className={'simpleForm__header'}>
                 Umów się na bezpłatną konsultację i&nbsp;pozwól nam zrozumieć Twoje potrzeby
