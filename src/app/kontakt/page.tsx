@@ -6,7 +6,7 @@ import Input from "@/app/_components/Input";
 import Textarea from "@/app/_components/Textarea";
 import Select from "@/app/_components/Select";
 import { typesOfServices, budgetList } from "@/app/_content/contact";
-import Loading from "@/app/loading";
+import Loading from "@/app/_components/Loading";
 
 const Page = () => {
     const submitBtn = useRef<(HTMLButtonElement | null)>(null);

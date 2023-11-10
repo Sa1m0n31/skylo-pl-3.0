@@ -14,6 +14,10 @@ html, body {
   --hover: #0553DC;
 }
 
+img {
+  height: auto;
+}
+
 .container {
   position: relative;
 }
@@ -867,6 +871,10 @@ a, button {
   width: 48%;
 }
 
+.offerPageContent__image {
+  height: auto;
+}
+
 .offerPageContent__content__block:not(:last-child) {
   margin-bottom: 50px;
 }
@@ -986,6 +994,7 @@ a, button {
   display: block;
   transform: translateY(-220px);
   margin: 0 auto -220px;
+  height: auto;
 }
 
 .portfolioFrames {
@@ -1275,6 +1284,11 @@ a, button {
   background: var(--hover);
 }
 
+.loadingPage {
+  width: 100%;
+  height: 100vh;
+}
+
 .d-mobile-flex,
 .d-mobile,
 .d-under-1200 {
@@ -1408,6 +1422,33 @@ a, button {
     font-size: 14px;
     max-width: 300px;
   }
+
+  .offerPageHeader__header {
+    font-size: 32px;
+    max-width: 700px;
+    margin-bottom: 20px;
+  }
+
+  .offerPageHeader__text {
+    font-size: 18px;
+    max-width: 700px;
+  }
+
+  .offerPageContent__content__block__text {
+    font-size: 15px;
+  }
+
+  .offerPageContent__content__block__header {
+    font-size: 24px;
+  }
+
+  .offerPagePoints__header {
+    font-size: 28px;
+  }
+
+  .offerPageHeader__textBefore {
+    font-size: 14px;
+  }
 }
 
 @media(max-width: 1500px) {
@@ -1422,6 +1463,31 @@ a, button {
     width: 200px;
     height: 45px;
     font-size: 12px;
+  }
+
+  .portfolio__heading {
+    font-size: 28px;
+  }
+
+  .portfolio__p {
+    font-size: 16px;
+  }
+
+  .portfolioFrames__right__stack__item {
+    margin-bottom: 15px;
+  }
+
+  .portfolioFrames__right__stack__item,
+  .portfolioFrames__left__text {
+    font-size: 14px;
+  }
+
+  .offerPagePoints__item__text {
+    font-size: 12px;
+  }
+
+  .offerPagePoints__item__header {
+    font-size: 14px;
   }
 
   .references__item__content__p,
@@ -1646,6 +1712,184 @@ a, button {
   .faq__left .sectionHeader__before,
   .faq__left .sectionHeader__header {
     text-align: left;
+  }
+
+  .offerPageHeader:not(.offerPageHeader--portfolio) {
+    padding: 25px 0;
+  }
+
+  .offerPageContent {
+    flex-direction: column;
+  }
+
+  .offerPageContent > * {
+    width: 100%;
+    max-width: 540px;
+  }
+
+  .offerPageContent__content {
+    margin-top: 50px;
+  }
+
+  .offerPageHeader__textBefore {
+    font-size: 10px;
+  }
+
+  .offerPageHeader__text {
+    font-size: 12px;
+    margin-bottom: 40px;
+  }
+
+  .offerPageHeader__header {
+    font-size: 20px;
+  }
+
+  .offerPageContent__content__block__header {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .offerPageContent__content__block__text {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .offerPageContent__content__block__text {
+    margin-top: 15px;
+  }
+
+  .offerPagePoints {
+    margin-top: 120px;
+  }
+
+  .offerPagePoints__header {
+    font-size: 20px;
+  }
+
+  .offerPagePoints__text {
+    font-size: 12px;
+    max-width: 294px;
+  }
+
+  .offerPagePoints__points {
+    flex-direction: column;
+  }
+
+  .offerPagePoints__header,
+  .offerPagePoints__item {
+    max-width: 294px;
+  }
+
+  .offerPagePoints--simple .offerPagePoints__header {
+    text-align: center;
+  }
+
+  .offerPagePoints__simplePoints__item::before {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 4px;
+    border-radius: 1px;
+  }
+
+  .offerPagePoints--simple .offerPagePoints__header {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .offerPagePoints__simplePoints__item {
+    margin-top: 60px;
+  }
+
+  .offerPagePoints__simplePoints__item,
+  .offerPagePoints--simple .offerPagePoints__text {
+    padding: 0;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .offerPageHeader--portfolio {
+    padding-top: 25px;
+  }
+
+  .portfolioMainImage {
+    transform: translateY(-75px);
+  }
+
+  .offerPageHeader--portfolio {
+    padding-bottom: 80px;
+  }
+
+  .portfolioFrames {
+    margin-top: 180px;
+    flex-direction: column;
+  }
+
+  .portfolioFrames > * {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .portfolioFrames * {
+    font-size: 12px;
+  }
+
+  .portfolioFrames__left {
+    margin-bottom: 15px;
+  }
+
+  .portfolio__heading,
+  .portfolio__p {
+    max-width: 294px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .portfolio__heading {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .portfolio__p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .selectOptions__item,
+  .selectBtn {
+    font-size: 15px;
+  }
+
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 25px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  .input--contactForm {
+    padding: 15px;
+    font-size: 15px;
+    height: 50px;
+  }
+
+  .input--textarea {
+    height: 120px;
+  }
+
+  .btn--submitContactForm {
+    max-width: 500px;
+    width: 100%;
+    height: 55px;
+    font-size: 14px;
   }
 }
 

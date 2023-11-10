@@ -35,14 +35,25 @@ const ProjectTimeline = () => {
     }, []);
 
     const animate = () => {
-        // @ts-ignore
-        lineRef.current.style.transform = 'scaleX(1)';
-
-        for(let i=0; i<=3; i++) {
-            setTimeout(() => {
+        try {
+            if(lineRef.current) {
                 // @ts-ignore
-                projectItemRefs.current[i].style.opacity = '1';
-            }, (i+1) * 800);
+                lineRef.current.style.transform = 'scaleX(1)';
+            }
+
+            for(let i=0; i<=3; i++) {
+                setTimeout(() => {
+                    if(projectItemRefs.current && projectItemRefs.current[i]) {
+                        // @ts-ignore
+                        projectItemRefs.current[i].style.opacity = '1';
+                    }
+
+
+                }, (i+1) * 800);
+            }
+        }
+        catch(e) {
+            console.log(e);
         }
     }
 

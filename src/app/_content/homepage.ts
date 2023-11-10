@@ -74,6 +74,33 @@ const offerGridItems = [
     }
 ];
 
+const offerSubmenu = [
+    {
+        title: 'Dedykowane aplikacje webowe',
+        link: '/aplikacje-webowe'
+    },
+    {
+        title: 'Aplikacje mobilne',
+        link: '/aplikacje-mobilne'
+    },
+    {
+        title: 'Platformy i serwisy internetowe',
+        link: '/platformy-internetowe'
+    },
+    {
+        title: 'Platformy e-commerce',
+        link: '/e-commerce'
+    },
+    {
+        title: 'UI/UX Design',
+        link: '/ui-ux-design'
+    },
+    {
+        title: 'Web development',
+        link: '/web-development'
+    }
+];
+
 const usp = [
     {
         title: 'Nie pozwolimy, żeby budżet Cię ograniczał',
@@ -118,7 +145,7 @@ const portfolio = [
         link: '/draft4u',
         image1: '/draft-1.png',
         image2: '/draft-2.png',
-        image3: '/job-portal-3.png',
+        image3: '/draft-mobile.png',
     }
 ];
 
@@ -198,4 +225,4 @@ const faq = [
     }
 ]
 
-export { offerGridItems, usp, portfolio, project, references, faq }
+export { offerSubmenu, offerGridItems, usp, portfolio, project, references, faq }

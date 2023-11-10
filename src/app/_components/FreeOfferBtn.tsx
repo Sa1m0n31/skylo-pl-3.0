@@ -7,7 +7,7 @@ const FreeOfferBtn = () => {
     return <Link className={'hero__left__btn hero__left__btn--offer center'}
                  href={'#darmowa-wycena'}>
         Darmowa wycena projektu
-        <Image className={'img img--heroLeftBtn'}
+        <Image className={'img img--heroLeftBtn d-desktop'}
                width={3}
                height={5}
                src={arrowIcon}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
+import { offerSubmenu } from "@/app/_content/homepage";
 
 const Footer = () => {
     return <footer className={'footer flex w'}>
@@ -27,11 +28,11 @@ const Footer = () => {
                       className={'footer__colGroup__item__link'}>
                     Strona główna
                 </Link>
-                <Link href={'/oferta'}
+                <Link href={'/#oferta'}
                       className={'footer__colGroup__item__link'}>
                     Oferta
                 </Link>
-                <Link href={'/Portfolio'}
+                <Link href={'/#realizacje'}
                       className={'footer__colGroup__item__link'}>
                     Portfolio
                 </Link>
@@ -45,30 +46,13 @@ const Footer = () => {
                 <h5 className={'footer__colGroup__item__header'}>
                     Usługi
                 </h5>
-                <Link href={'/'}
-                      className={'footer__colGroup__item__link'}>
-                    Aplikacje webowe
-                </Link>
-                <Link href={'/'}
-                      className={'footer__colGroup__item__link'}>
-                    Aplikacje mobilne
-                </Link>
-                <Link href={'/'}
-                      className={'footer__colGroup__item__link'}>
-                    Platformy i serwisy internetowe
-                </Link>
-                <Link href={'/'}
-                      className={'footer__colGroup__item__link'}>
-                    Platformy eCommerce i sklepy internetowe
-                </Link>
-                <Link href={'/'}
-                      className={'footer__colGroup__item__link'}>
-                    UI/UX Design
-                </Link>
-                <Link href={'/'}
-                      className={'footer__colGroup__item__link'}>
-                    Web development
-                </Link>
+
+                {offerSubmenu.map((item, index) => {
+                    return <Link href={`/oferta/${item.link}`}
+                                 className={'footer__colGroup__item__link'}>
+                        {item.title}
+                    </Link>
+                })}
             </div>
 
             <div className={'footer__colGroup__item'}>
@@ -76,7 +60,7 @@ const Footer = () => {
                     Kontakt i dane firmy
                 </h5>
 
-                <p className={'footer__colGroup__item__text'}>
+                <div className={'footer__colGroup__item__text'}>
                     <span>Skylo.pl - Software House</span>
                     <span>
                         NIP: <span className={'grey'}>5030084949</span>
@@ -113,7 +97,7 @@ const Footer = () => {
                                    alt={'instagram'} />
                         </Link>
                     </div>
-                </p>
+                </div>
             </div>
         </div>
     </footer>

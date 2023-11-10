@@ -4,37 +4,11 @@ import React, {useRef, useState} from 'react';
 import logo from '../_img/skylo-logo.png';
 import Image from "next/image";
 import Link from "next/link";
+import { offerSubmenu } from "@/app/_content/homepage";
 
 interface SiteHeaderProps {
     menu: number
 }
-
-const submenu = [
-    {
-        title: 'Dedykowane aplikacje webowe',
-        link: '/aplikacje-webowe'
-    },
-    {
-        title: 'Aplikacje mobilne',
-        link: '/aplikacje-mobilne'
-    },
-    {
-        title: 'Platformy i serwisy internetowe',
-        link: '/platformy-internetowe'
-    },
-    {
-        title: 'Platformy e-commerce',
-        link: '/e-commerce'
-    },
-    {
-        title: 'UI/UX Design',
-        link: '/ui-ux-design'
-    },
-    {
-        title: 'Web development',
-        link: '/web-development'
-    }
-]
 
 const menuItems = [
     {
@@ -156,10 +130,13 @@ const SiteHeader = ({menu}: SiteHeaderProps) => {
 
                     <div className={'mobileMenu__content__item__submenu'} ref={submenuRef}>
 
-                        {submenu.map((item, index) => {
+                        {offerSubmenu.map((item, index) => {
                             return <Link className={'mobileMenu__content__item__submenu__item'}
+                                         onClick={() => {
+                                             closeMobileMenu();
+                                         }}
                                          key={index}
-                                         href={item.link}>
+                                         href={`/oferta/${item.link}`}>
                                 {item.title}
                             </Link>
                         })}
