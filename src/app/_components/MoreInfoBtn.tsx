@@ -11,7 +11,7 @@ const MoreInfoBtn = ({link}: MoreInfoBtnProps) => {
               href={link}>
         Więcej informacji
         <Image src={arrowIcon}
-               className={'img'}
+               className={'img d-desktop'}
                width={5}
                height={5}
                alt={'wiecej-informacji'} />

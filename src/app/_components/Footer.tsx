@@ -96,6 +96,23 @@ const Footer = () => {
                           href={'mailto:kontakt@skylo.pl'}>
                         kontakt@skylo.pl
                     </Link>
+
+                    <div className={'bottomBar__social flex d-mobile-flex'}>
+                        <Link href={'https://www.facebook.com/skylopl'} rel={'noreferrer'} target={'_blank'}>
+                            <Image src={'/facebook.svg'}
+                                   className={'img'}
+                                   width={20}
+                                   height={20}
+                                   alt={'facebook'} />
+                        </Link>
+                        <Link href={'https://www.instagram.com/skylopl/'} rel={'noreferrer'} target={'_blank'}>
+                            <Image src={'/instagram.svg'}
+                                   className={'img'}
+                                   width={20}
+                                   height={20}
+                                   alt={'instagram'} />
+                        </Link>
+                    </div>
                 </p>
             </div>
         </div>

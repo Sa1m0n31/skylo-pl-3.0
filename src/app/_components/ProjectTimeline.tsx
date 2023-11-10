@@ -62,7 +62,7 @@ const ProjectTimeline = () => {
         <a className={'hero__left__btn hero__left__btn--projectTimeline center'}
            href={'#darmowa-wycena'}>
             Dowiedz się więcej
-            <Image className={'img img--heroLeftBtn'}
+            <Image className={'img img--heroLeftBtn d-desktop'}
                    width={3}
                    height={5}
                    src={arrowIcon}

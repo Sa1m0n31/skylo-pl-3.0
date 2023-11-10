@@ -50,7 +50,7 @@ const Faq = () => {
             // @ts-ignore
             answerRefs.current[i].style.height = 'auto';
             // @ts-ignore
-            answerRefs.current[i].style.padding = '15px 0';
+            answerRefs.current[i].style.padding = window.innerWidth > 768 ? '15px 0' : '10px 0';
             setTimeout(() => {
                 // @ts-ignore
                 answerRefs.current[i].style.opacity = '1';
@@ -85,7 +85,7 @@ const Faq = () => {
             <SectionHeader textBefore={'FAQ - Najczęściej zadawane pytania'}
                            header={'Masz pytania? Pozwól nam na nie odpowiedzieć!'} />
 
-            <Link className={'btn btn--faq flex'}
+            <Link className={'btn btn--faq flex d-desktop'}
                   href={'/kontakt'}>
                 Chcesz wiedzieć więcej? Skontaktuj się!
 

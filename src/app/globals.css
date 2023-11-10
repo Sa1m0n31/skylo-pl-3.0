@@ -1275,6 +1275,7 @@ a, button {
   background: var(--hover);
 }
 
+.d-mobile-flex,
 .d-mobile,
 .d-under-1200 {
   display: none;
@@ -1669,6 +1670,10 @@ a, button {
     display: none !important;
   }
 
+  .d-mobile-flex {
+    display: flex;
+  }
+
   .d-mobile {
     display: block;
   }
@@ -1690,6 +1695,387 @@ a, button {
 
   .siteHeader {
     padding: 25px 0;
+  }
+
+  .hero {
+    margin-top: 40px;
+  }
+
+  .hero__left {
+    width: 100%;
+  }
+
+  .hero__left__aboveHeader {
+    font-size: 10px;
+  }
+
+  .hero__left__header {
+    font-size: 24px;
+    margin: 10px 0 25px;
+  }
+
+  .hero__left__text {
+    font-size: 12px;
+    margin-bottom: 35px;
+  }
+
+  .hero__left__btn {
+    border-radius: 15px;
+    max-width: 294px;
+    height: 47px;
+    font-size: 12px;
+  }
+
+  .section--offer {
+    margin-top: 120px;
+  }
+
+  .sectionHeader__before {
+    font-size: 10px;
+  }
+
+  .sectionHeader__header {
+    font-size: 20px;
+  }
+
+  .offer__grid {
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+  }
+
+  .offer__grid__item__text {
+    text-align: center;
+  }
+
+  .offer__grid__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .offer__grid__item__title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 25px;
+  }
+
+  .offer__grid__item__text {
+    font-size: 12px;
+    color: #606060;
+    max-width: 294px;
+  }
+
+  .offer__grid__item__link {
+    text-decoration: underline;
+    font-size: 12px;
+  }
+
+  .section--usp {
+    margin-top: 125px;
+  }
+
+  .usp__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .usp__grid__item__title::before {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+  }
+
+  .usp__grid__item__title {
+    text-align: center;
+    padding: 0;
+    max-width: 294px;
+  }
+
+  .usp__grid__item__text {
+    font-size: 12px;
+    text-align: center;
+    max-width: 294px;
+  }
+
+  .techStack {
+    margin-top: 25px;
+  }
+
+  .techStack__item > img {
+    height: 23%;
+  }
+
+  .section--portfolio {
+    margin-top: 125px;
+  }
+
+  .sectionHeader--center > .sectionHeader__header {
+    max-width: 294px;
+  }
+
+  .section__text {
+    font-size: 12px;
+    margin: -25px auto 25px;
+    max-width: 294px;
+  }
+
+  .section__disclaimer {
+    font-size: 10px;
+    margin-bottom: 25px;
+  }
+
+  .references__text {
+    font-size: 12px;
+    max-width: 294px;
+    margin-top: -30px;
+    margin-bottom: 60px;
+  }
+
+  .references__item__header__logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 12%;
+  }
+
+  .references__item__content__p,
+  .references__item__header__title {
+    font-size: 12px;
+  }
+
+  .references__item::before {
+    width: 20px;
+    right: 40px;
+  }
+
+  .references__stars {
+    width: 115px;
+    margin: -5px auto 15px;
+  }
+
+  .references__stars > .img {
+    width: 55px;
+  }
+
+  .references__stars__text {
+    font-size: 12px;
+  }
+
+  .btn--references {
+    font-size: 12px;
+    width: 294px;
+    height: 46px;
+  }
+
+  .section--faq {
+    flex-direction: column;
+    margin-top: 125px;
+  }
+
+  .section--faq > * {
+    width: 100%;
+  }
+
+  .faq__left .sectionHeader__before,
+  .faq__left .sectionHeader__header {
+    text-align: center;
+  }
+
+  .faq__left .sectionHeader__header {
+    font-size: 20px;
+    max-width: 294px;
+  }
+
+  .faq__item__content,
+  .faq__item__header__title {
+    font-size: 12px;
+  }
+
+  .faq__item__header__icon > .img {
+    top: -3px;
+  }
+
+  .faq__item__header__icon > .img {
+    width: 10px;
+  }
+
+  .faq__item:first-child .faq__item__content {
+    padding: 10px 0;
+  }
+
+  .faq__item__header {
+    padding: 10px 0;
+  }
+
+  .simpleForm__header {
+    font-size: 20px;
+    max-width: 294px;
+  }
+
+  .simpleForm__form__label {
+    width: 218px;
+    margin-right: 10px;
+    height: 40px;
+  }
+
+  .input--simpleForm {
+    font-size: 13px;
+    width: 218px;
+    height: 40px;
+  }
+
+  .simpleForm__text {
+    font-size: 12px;
+    margin-bottom: 50px;
+  }
+
+  .btn--simpleFormSubmit {
+    height: 40px;
+    width: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn--simpleFormSubmit > img {
+    width: 10px;
+  }
+
+  .footer {
+    margin-top: 80px;
+    padding: 40px 0 20px;
+  }
+
+  .footer,
+  .footer__colGroup {
+    flex-direction: column;
+  }
+
+  .footer > *,
+  .footer__colGroup > * {
+    width: 100%;
+  }
+
+  .footer__colGroup__item__text > a,
+  .footer__colGroup__item__text__marginTop,
+  .footer__colGroup__item__text span,
+  .footer__colGroup__item__link,
+  .footer__colGroup *,
+  .footer__col * {
+    font-size: 12px !important;
+    text-align: center;
+  }
+
+  .footer__colGroup__item,
+  .footer__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .footer__col > a > img {
+    width: 140px;
+    height: auto;
+  }
+
+  .bottomBar {
+    padding: 10px 0;
+  }
+
+  .bottomBar__social {
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .bottomBar__header {
+    text-align: center;
+    font-size: 10px;
+    margin: auto;
+  }
+
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 100;
+    padding: 30px;
+    transform: scaleX(0);
+    transform-origin: top right;
+    transition: .3s all ease-in;
+  }
+
+  .mobileMenu > * {
+    opacity: 0;
+    transition: .3s all ease-in;
+  }
+
+  .mobileMenu__top__logo {
+    width: 40px;
+    height: auto;
+  }
+
+  .btn--closeMobileMenu {
+    background: transparent;
+    width: 12px;
+    height: auto;
+    border: none;
+    outline: none;
+  }
+
+  .mobileMenu__content {
+    margin-top: 30px;
+  }
+
+  .mobileMenu__content__item {
+    border-bottom: 1px solid #DFDFDF;
+    padding: 20px 0;
+  }
+
+  .mobileMenu__content__item__link {
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .mobileMenu__content__item__btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .mobileMenu__content__item__submenu__item:first-child {
+    margin-top: 12px;
+  }
+
+  .mobileMenu__content__item__submenu__item {
+    font-size: 12px;
+    font-weight: 500;
+    color: #606060;
+    padding: 4px 0;
+    display: block;
+  }
+
+  .mobileMenu__content__item__submenu {
+    height: 0;
+    opacity: 0;
+    transition: .3s all;
+    overflow: hidden;
   }
 }
 

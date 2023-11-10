@@ -8,7 +8,7 @@ const BottomBar = () => {
             &copy; {new Date().getFullYear()} Skylo.pl - Software House
         </h6>
 
-        <div className={'bottomBar__social flex'}>
+        <div className={'bottomBar__social flex d-desktop'}>
             <Link href={'https://www.facebook.com/skylopl'} rel={'noreferrer'} target={'_blank'}>
                 <Image src={'/facebook.svg'}
                        className={'img'}

@@ -22,14 +22,14 @@ const HeroSection = () => {
             <Link className={'hero__left__btn center'}
                href={'#darmowa-wycena'}>
                 Darmowa wycena projektu
-                <Image className={'img img--heroLeftBtn'}
+                <Image className={'img img--heroLeftBtn d-desktop'}
                        width={6}
                        height={6}
                        src={arrowIcon}
                        alt={'darmowa-wycena'} />
             </Link>
         </div>
-        <figure className={'hero__right'}>
+        <figure className={'hero__right d-desktop'}>
             <Image className={'img img--heroRight'}
                    src={mainImage}
                    width={569}

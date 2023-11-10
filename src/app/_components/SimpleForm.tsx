@@ -1,6 +1,7 @@
 "use client";
 
 import React, {useState} from 'react';
+import Image from "next/image";
 
 const SimpleForm = () => {
     const [value, setValue] = useState('');
@@ -34,7 +35,12 @@ const SimpleForm = () => {
                 </label>
                 <button className={'btn btn--simpleFormSubmit'}
                         onClick={handleSubmit}>
-                    Wyślij
+                    <span className={'d-desktop'}>Wyślij</span>
+                    <Image src={'/send.svg'}
+                           className={'d-mobile'}
+                           width={10}
+                           height={10}
+                           alt={'wyślij'} />
                 </button>
             </form>
         </div>
