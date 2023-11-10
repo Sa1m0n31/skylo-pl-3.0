@@ -1891,6 +1891,10 @@ a, button {
     height: 55px;
     font-size: 14px;
   }
+
+  .section--references {
+    margin-top: 125px;
+  }
 }
 
 @media(max-width: 845px) {
@@ -2320,6 +2324,106 @@ a, button {
     opacity: 0;
     transition: .3s all;
     overflow: hidden;
+  }
+
+  .project > .w {
+    width: 100%;
+    height: 257px;
+    overflow-x: auto;
+  }
+
+  .project {
+    margin-top: 75px;
+    padding-bottom: 0;
+  }
+
+  .project__line {
+    position: absolute;
+    top: 80px;
+    transform: scaleX(1);
+  }
+
+  .project__item {
+    top: 50px;
+    width: 37%;
+    opacity: 1;
+  }
+
+  .project__item:nth-child(4) {
+    width: calc(37% + 50px);
+    padding-right: 50px;
+  }
+
+  .project__item:nth-child(4) .project__item__header {
+    margin-top: -33px;
+  }
+
+  .project__item:nth-child(1) {
+    left: 8%;
+  }
+
+  .project__item:nth-child(2) {
+    left: 53%;
+  }
+
+  .project__item:nth-child(3) {
+    left: 100%;
+  }
+
+  .project__item:nth-child(4) {
+    left: 150%;
+  }
+
+  .scroll,
+  .scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #DFDFDF #DFDFDF;
+  }
+
+  .scroll::-webkit-scrollbar {
+    width: 7px;
+    height: 4px;
+  }
+
+  .scroll::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+
+  .scroll::-webkit-scrollbar-thumb {
+    background: #033277;
+    border: 33px none #DFDFDF;
+    border-radius: 36px;
+  }
+
+  .scroll::-webkit-scrollbar-thumb:hover {
+    background: #033277;
+  }
+
+  .scroll::-webkit-scrollbar-thumb:active {
+    background: #033277;
+  }
+
+  .scroll::-webkit-scrollbar-track {
+    background: #DFDFDF;
+    border: 49px none #DFDFDF;
+    border-radius: 50px;
+  }
+
+  .scroll::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  @media(min-width: 459px) {
+    .project__item:nth-child(4) .project__item__header {
+      margin-top: -16px;
+    }
+  }
+
+  @media(min-width: 521px) {
+    .project__item:nth-child(1) .project__item__header {
+      margin-top: -18px;
+    }
   }
 }
 

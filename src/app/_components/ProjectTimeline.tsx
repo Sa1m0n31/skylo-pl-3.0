@@ -19,7 +19,7 @@ const ProjectTimeline = () => {
             if(lineRef.current) {
                 const element: any = lineRef.current;
                 const rect = element.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
+                if(rect.top < window.innerHeight) {
                     animate();
                 }
             }
@@ -83,7 +83,7 @@ const ProjectTimeline = () => {
         <div className={'project'}>
             <span className={'project__line'} ref={lineRef}></span>
 
-            <div className={'w'}>
+            <div className={'w scroll'}>
                 {project.map((item, index) => {
                     const { title, text } = item;
 
