@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 html, body {
@@ -336,12 +338,14 @@ a, button {
   top: 50%;
   right: 0;
   transform: translateY(55px);
+  width: 454px;
 }
 
 .portfolio__item__right__img--3 {
   top: 70%;
   left: 10%;
   transform: translateY(35px);
+  width: 173px;
 }
 
 .section--portfolio {
@@ -1914,6 +1918,10 @@ a, button {
 }
 
 @media(max-width: 768px) {
+  * {
+    font-family: 'Poppins', sans-serif !important;
+  }
+
   .d-desktop {
     display: none !important;
   }
@@ -1928,6 +1936,7 @@ a, button {
 
   .w {
     width: 90%;
+    max-width: 294px;
   }
 
   .siteHeader > .w {
@@ -2328,6 +2337,7 @@ a, button {
 
   .project > .w {
     width: 100%;
+    max-width: 100% !important;
     height: 257px;
     overflow-x: auto;
   }
@@ -2381,6 +2391,8 @@ a, button {
   }
 
   .scroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+    -webkit-overflow-scrolling: auto;
     width: 7px;
     height: 4px;
   }
@@ -2424,6 +2436,11 @@ a, button {
     .project__item:nth-child(1) .project__item__header {
       margin-top: -18px;
     }
+  }
+
+  .simpleForm__text ~ .success {
+    font-size: 13px;
+    text-align: center;
   }
 }
 

@@ -2,9 +2,11 @@
 
 import React, {useState} from 'react';
 import Image from "next/image";
+import axios from 'axios';
 
 const SimpleForm = () => {
     const [value, setValue] = useState('');
+    const [success, setSuccess] = useState(false);
 
     const handleChange = (e: any) => {
         setValue(e.target.value);
@@ -12,6 +14,25 @@ const SimpleForm = () => {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
+
+        if(value) {
+            const form = new FormData();
+            form.append('email', value);
+
+            axios.post(`http://test.skylo.pl/send-email/`, form, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+                .then((res: any) => {
+                    console.log(res);
+                    setValue('');
+                    setSuccess(true);
+                })
+                .catch((e: any) => {
+                    console.log(e);
+                });
+        }
     }
 
     return <section className={'section section--simpleForm'}>
@@ -23,10 +44,11 @@ const SimpleForm = () => {
                 Umów się na bezpłatną konsultację i&nbsp;pozwól nam zrozumieć Twoje potrzeby
             </h4>
             <p className={'simpleForm__text'}>
-                Przedstaw nam swoje cele i pomysły, a my zaproponujemy Ci najkorzystniejsze rozwiązanie, dostosowane także do Twojego budżetu.
+                Przedstaw nam swoje cele i pomysły, a my zaproponujemy Ci najkorzystniejsze rozwiązanie,
+                dostosowane także do Twojego budżetu.
             </p>
 
-            <form className={'simpleForm__form flex'}>
+            {!success ? <form className={'simpleForm__form flex'}>
                 <label className={'simpleForm__form__label'}>
                     <input className={'input input--simpleForm'}
                            placeholder={'Twój adres e-mail'}
@@ -42,7 +64,9 @@ const SimpleForm = () => {
                            height={10}
                            alt={'wyślij'} />
                 </button>
-            </form>
+            </form> : <span className={'success success--simpleForm'}>
+                Dziękujemy za wiadomość! Skontaktujemy się najszybciej, jak to możliwe.
+            </span>}
         </div>
     </section>
 };

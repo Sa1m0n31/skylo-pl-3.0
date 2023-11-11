@@ -112,6 +112,7 @@ const SiteHeader = ({menu}: SiteHeaderProps) => {
             <div className={'mobileMenu__content'} ref={mobileMenuContentRef}>
                 <div className={'mobileMenu__content__item'}>
                     <Link className={'mobileMenu__content__item__link'}
+                          onClick={closeMobileMenu}
                           href={'/'}>
                         Home
                     </Link>
@@ -144,6 +145,7 @@ const SiteHeader = ({menu}: SiteHeaderProps) => {
                 </div>
                 <div className={'mobileMenu__content__item'}>
                     <Link className={'mobileMenu__content__item__link'}
+                          onClick={closeMobileMenu}
                           href={'/#realizacje'}>
                         Realizacje
                     </Link>

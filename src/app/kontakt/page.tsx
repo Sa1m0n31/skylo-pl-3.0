@@ -7,6 +7,7 @@ import Textarea from "@/app/_components/Textarea";
 import Select from "@/app/_components/Select";
 import { typesOfServices, budgetList } from "@/app/_content/contact";
 import Loading from "@/app/_components/Loading";
+import axios from 'axios';
 
 const Page = () => {
     const submitBtn = useRef<(HTMLButtonElement | null)>(null);
@@ -26,15 +27,6 @@ const Page = () => {
         setError(false);
     }, [name, email]);
 
-    useEffect(() => {
-        if(loading) {
-
-        }
-        else {
-
-        }
-    }, [loading]);
-
     const resetForm = () => {
         setName('');
         setCompany('');
@@ -51,13 +43,30 @@ const Page = () => {
         if(name && email) {
             setLoading(true);
 
-            // TODO: send form
+            const form = new FormData();
+            form.append('name', name);
+            form.append('company', company);
+            form.append('email', email);
+            form.append('phoneNumber', phoneNumber);
+            form.append('typeOfService', typesOfServices[typeOfService]);
+            form.append('budget', budgetList[budget]);
+            form.append('message', message);
 
-            setTimeout(() => {
-                setLoading(false);
-                setSuccess(true);
-                resetForm();
-            }, 2000);
+            axios.post(`http://test.skylo.pl/send-form/`, form, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+                .then((res: any) => {
+                    console.log(res);
+                    resetForm();
+                    setLoading(false);
+                    setSuccess(true);
+                })
+                .catch((e: any) => {
+                    setLoading(false);
+                    console.log(e);
+                });
         }
         else {
             setError(true);
