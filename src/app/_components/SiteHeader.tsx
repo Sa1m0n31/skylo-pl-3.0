@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import logo from '../_img/skylo-logo.png';
 import Image from "next/image";
 import Link from "next/link";
@@ -17,22 +17,19 @@ const menuItems = [
     },
     {
         label: 'Oferta',
-        link: '/#oferta'
+        link: '/oferta'
     },
     {
         label: 'Realizacje',
-        link: '/#realizacje'
+        link: '/portfolio'
     }
 ]
 
 const SiteHeader = ({menu}: SiteHeaderProps) => {
-    const [submenuVisible, setSubmenuVisible] = useState(false);
-
     const mobileMenuRef = useRef<HTMLDivElement>(null);
     const mobileMenuTopRef = useRef<HTMLDivElement>(null);
     const mobileMenuContentRef = useRef<HTMLDivElement>(null);
     const submenuRef = useRef<HTMLDivElement>(null);
-    const submenuArrowRef = useRef<HTMLImageElement>(null);
 
     const mobileMenuChildren = [mobileMenuTopRef, mobileMenuContentRef];
 
@@ -45,14 +42,14 @@ const SiteHeader = ({menu}: SiteHeaderProps) => {
 
         setTimeout(() => {
             if(mobileMenuRef.current) {
-                mobileMenuRef.current.style.transform = 'scaleX(0)';
+                mobileMenuRef.current.style.transform = 'scaleY(0)';
             }
         }, 300);
     }
 
     const openMobileMenu = () => {
         if(mobileMenuRef.current) {
-            mobileMenuRef.current.style.transform = 'scaleX(1)';
+            mobileMenuRef.current.style.transform = 'scaleY(1)';
 
             setTimeout(() => {
                 mobileMenuChildren.forEach((item) => {
@@ -64,37 +61,10 @@ const SiteHeader = ({menu}: SiteHeaderProps) => {
         }
     }
 
-    const toggleSubmenu = () => {
-        if(submenuRef.current && submenuArrowRef.current) {
-            if(submenuVisible) {
-                submenuRef.current.style.opacity = '0';
-                submenuArrowRef.current.style.transform = 'rotateX(0)';
-
-                setTimeout(() => {
-                    if(submenuRef.current) {
-                        submenuRef.current.style.height = '0';
-                    }
-                }, 300);
-            }
-            else {
-                submenuRef.current.style.height = 'auto';
-                submenuArrowRef.current.style.transform = 'rotateX(180deg)';
-
-                setTimeout(() => {
-                    if(submenuRef.current) {
-                        submenuRef.current.style.opacity = '1';
-                    }
-                }, 300);
-            }
-
-            setSubmenuVisible(p => !p);
-        }
-    }
-
-    return <header className={'siteHeader'}>
+    return <header className={menu === 0 ? 'siteHeader siteHeader--home' : 'siteHeader'}>
         <div className={'mobileMenu d-mobile'} ref={mobileMenuRef}>
             <div className={'mobileMenu__top flex'} ref={mobileMenuTopRef}>
-                <Image src={'/logo-mobile.png'}
+                <Image src={'/logo-mobile.svg'}
                        className={'mobileMenu__top__logo'}
                        width={40}
                        height={28}
@@ -118,16 +88,10 @@ const SiteHeader = ({menu}: SiteHeaderProps) => {
                     </Link>
                 </div>
                 <div className={'mobileMenu__content__item'}>
-                    <button className={'mobileMenu__content__item__btn flex'}
-                            onClick={toggleSubmenu}>
+                    <Link className={'mobileMenu__content__item__btn flex'}
+                          href={'/oferta'}>
                         Oferta
-
-                        <Image src={'/arrow-down.svg'}
-                               ref={submenuArrowRef}
-                               width={8}
-                               height={5}
-                               alt={'zwiń/rozwiń'} />
-                    </button>
+                    </Link>
 
                     <div className={'mobileMenu__content__item__submenu'} ref={submenuRef}>
 
@@ -146,7 +110,7 @@ const SiteHeader = ({menu}: SiteHeaderProps) => {
                 <div className={'mobileMenu__content__item'}>
                     <Link className={'mobileMenu__content__item__link'}
                           onClick={closeMobileMenu}
-                          href={'/#realizacje'}>
+                          href={'/portfolio'}>
                         Realizacje
                     </Link>
                 </div>
@@ -163,7 +127,7 @@ const SiteHeader = ({menu}: SiteHeaderProps) => {
                 <Image className={'img d-under-1200'}
                        width={40}
                        height={28}
-                       src={'/logo-mobile.png'}
+                       src={'/logo-mobile.svg'}
                        alt={'skylo-logo'} />
             </Link>
 

@@ -3,8 +3,12 @@ import SectionHeader from "@/app/_components/SectionHeader";
 import {portfolio} from "@/app/_content/homepage";
 import PortfolioSectionItem from "@/app/_components/PortfolioSectionItem";
 
-const PortfolioSection = () => {
-    return <div className={'section section--portfolio w'}>
+interface PortfolioSectionProps {
+    page: undefined | boolean;
+}
+
+const PortfolioSection = ({page}: PortfolioSectionProps) => {
+    return <div className={page ? 'section section--portfolio section--page w' : 'section section--portfolio w'}>
         <span className={'anchor'}
               id={'realizacje'}></span>
 

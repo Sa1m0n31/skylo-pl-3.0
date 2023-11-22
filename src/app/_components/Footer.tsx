@@ -28,11 +28,11 @@ const Footer = () => {
                       className={'footer__colGroup__item__link'}>
                     Strona główna
                 </Link>
-                <Link href={'/#oferta'}
+                <Link href={'/oferta'}
                       className={'footer__colGroup__item__link'}>
                     Oferta
                 </Link>
-                <Link href={'/#realizacje'}
+                <Link href={'/portfolio'}
                       className={'footer__colGroup__item__link'}>
                     Portfolio
                 </Link>

@@ -1,5 +1,4 @@
 import SiteHeader from "@/app/_components/SiteHeader";
-import ProjectTimeline from "@/app/_components/ProjectTimeline";
 import SimpleForm from "@/app/_components/SimpleForm";
 import Footer from "@/app/_components/Footer";
 
@@ -13,7 +12,6 @@ export default function RootLayout({
 
         {children}
 
-        <ProjectTimeline />
         <SimpleForm />
         <Footer />
     </div>

@@ -3,8 +3,12 @@ import SectionHeader from "@/app/_components/SectionHeader";
 import OfferItem from "@/app/_components/OfferItem";
 import { offerGridItems } from "@/app/_content/homepage";
 
-const OfferSection = () => {
-    return <div className={'section section--offer w'}>
+interface OfferSectionParams {
+    page: undefined | boolean
+}
+
+const OfferSection = ({page}: OfferSectionParams) => {
+    return <div className={page ? 'section section--offer section--page w' : 'section section--offer w'}>
         <span className={'anchor'}
               id={'oferta'}></span>
 

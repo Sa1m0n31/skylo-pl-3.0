@@ -8,7 +8,8 @@ const Page = () => {
     return <>
         <OfferPageHeader textBefore={eCommerce.textBefore}
                          content={eCommerce.headerText}>
-            Skuteczne <span className={'blue'}>platformy eCommerce</span>, które pozwolą Ci zwiększyć sprzedaż
+            Skuteczne <span className={'blue'}>platformy eCommerce</span>,
+            <br className={'d-desktop'} /> które pozwolą Ci zwiększyć sprzedaż
         </OfferPageHeader>
 
         <OfferPageContent content={eCommerce.content}

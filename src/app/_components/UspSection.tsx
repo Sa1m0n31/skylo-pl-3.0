@@ -5,7 +5,7 @@ import UspItem from "@/app/_components/UspItem";
 
 const UspSection = () => {
     return <section className={'section section--usp w'}>
-        <SectionHeader textBefore={'Nasza propozycja'}
+        <SectionHeader textBefore={'Krótko o Skylo.pl'}
                        header={'Dlaczego warto nam zaufać?'} />
 
         <div className={'usp__grid'}>

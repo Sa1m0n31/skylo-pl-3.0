@@ -7,7 +7,7 @@ import Image from "next/image";
 import {faq} from "@/app/_content/homepage";
 
 const Faq = () => {
-    const [currentAnswer, setCurrentAnswer] = useState(0);
+    const [currentAnswer, setCurrentAnswer] = useState(-1);
 
     const plusRefs = useRef<(HTMLDivElement | null)[]>([]);
     const minusRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -54,8 +54,8 @@ const Faq = () => {
             setTimeout(() => {
                 // @ts-ignore
                 answerRefs.current[i].style.opacity = '1';
-            }, 300);
-        }, 300);
+            }, 1);
+        }, 1);
 
         setCurrentAnswer(i);
     }
@@ -69,7 +69,7 @@ const Faq = () => {
         minusRefs.current[i].style.opacity = '0';
 
         // @ts-ignore
-        answerRefs.current[i].style.opacity = '0';
+        // answerRefs.current[i].style.opacity = '0';
         setTimeout(() => {
             // @ts-ignore
             answerRefs.current[i].style.transform = 'scaleY(0)';
@@ -77,7 +77,7 @@ const Faq = () => {
             answerRefs.current[i].style.height = '0';
             // @ts-ignore
             answerRefs.current[i].style.padding = '0';
-        }, 300);
+        }, 1);
     }
 
     return <section className={'section section--faq flex w'}>
@@ -126,8 +126,11 @@ const Faq = () => {
                    </button>
 
                    <div className={'faq__item__content'}
+                        dangerouslySetInnerHTML={{
+                            __html: answer
+                        }}
                         ref={(ref) => { updateAnswerRefs(index, ref); }}>
-                       {answer}
+
                    </div>
                </div>
             })}

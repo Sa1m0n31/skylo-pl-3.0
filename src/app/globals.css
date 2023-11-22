@@ -31,7 +31,11 @@ img {
   margin-right: auto;
 }
 
-a, button, input {
+input {
+  outline: none !important;
+}
+
+a, button {
   outline: none !important;
   transition: .2s all;
 }
@@ -104,6 +108,24 @@ a, button {
   background: var(--primary);
 }
 
+.siteHeader__menu__item:not(.siteHeader__menu__item--current)::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  opacity: 0;
+  transition: .4s all;
+}
+
+.siteHeader__menu__item:not(.siteHeader__menu__item--current):hover::before {
+  left: -14px;
+  opacity: 1;
+}
+
 .siteHeader__btn {
   position: absolute;
   top: 50%;
@@ -117,10 +139,34 @@ a, button {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
+  transition: .3s all ease-in;
+}
+
+.siteHeader__btn:hover {
+  transform: translateY(calc(-50% - 2px));
 }
 
 .hero {
   margin-top: 50px;
+  position: relative;
+}
+
+.pageCircle {
+  display: none;
+}
+
+@media(min-width: 1800px) {
+  .pageCircle {
+    display: block;
+    position: absolute;
+    top: -167px;
+    left: -216px;
+    width: 1057px;
+    height: 1057px;
+    border-radius: 50%;
+    border: 1px solid #D5E6FF;
+    z-index: 10000;
+  }
 }
 
 .hero__left {
@@ -150,7 +196,7 @@ a, button {
 .hero__left__btn {
   background: var(--primary);
   width: 393px;
-  height: 85px;
+  height: 75px;
   border-radius: 30px;
   font-weight: 600;
   text-transform: uppercase;
@@ -175,6 +221,19 @@ a, button {
 
 .hero__right {
   width: 40%;
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.img--heroRight {
+  animation: moveUpDown 5s ease-in-out infinite;
 }
 
 .section {
@@ -222,6 +281,25 @@ a, button {
   color: #606060;
   font-size: 18px;
   font-weight: 400;
+}
+
+.animation {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: .8s all ease-in-out;
+}
+
+.offer__grid__item:nth-child(5) .offer__grid__item__text,
+.offer__grid__item:first-child .offer__grid__item__text {
+  max-width: 300px;
+}
+
+.offer__grid__item:nth-child(4) .offer__grid__item__text {
+  max-width: 304px;
+}
+
+.offer__grid__item:nth-child(2) .offer__grid__item__text {
+  max-width: 277px;
 }
 
 .offer__grid__item__link {
@@ -487,6 +565,7 @@ a, button {
   width: 30%;
   position: relative;
   padding: 25px;
+  min-height: 445px;
 }
 
 .references__item::before {
@@ -507,6 +586,7 @@ a, button {
   height: 100px;
   background: #fff;
   margin-right: 5%;
+  border-radius: 50%;
 }
 
 .references__item__header__logo > .img {
@@ -556,16 +636,17 @@ a, button {
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
-  transition: .2s all;
+  transition: .2s all ease-in;
 }
 
 .btn--references:hover {
-  background: #efefef;
+  transform: translateY(-3px);
 }
 
 .btn--references > .img {
   width: 32px;
   margin-left: 15px;
+  transition: .3s all;
 }
 
 .section--faq {
@@ -637,7 +718,7 @@ a, button {
   position: absolute;
   top: 0;
   right: 0;
-  transition: .3s opacity;
+  transition: .8s opacity;
 }
 
 .img--minus {
@@ -651,23 +732,15 @@ a, button {
   overflow: hidden;
   opacity: 0;
   transform: scaleY(0);
+  transform-origin: top left;
   height: 0;
-  transition: .3s all;
+  transition: .6s all;
 }
 
-.faq__item:first-child .img--plus {
-  opacity: 0;
-}
-
-.faq__item:first-child .img--minus {
-  opacity: 1;
-}
-
-.faq__item:first-child .faq__item__content {
-  transform: scaleY(1);
-  height: auto;
-  opacity: 1;
-  padding: 15px 0;
+.faq__item__content a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 .section--simpleForm {
@@ -736,7 +809,7 @@ a, button {
 }
 
 .btn--simpleFormSubmit:hover {
-  background: transparent linear-gradient(180deg, #0664ED 0%, #0632ED 100%) 0% 0% no-repeat padding-box;
+  background: #0632ED;
 }
 
 .footer {
@@ -905,6 +978,7 @@ a, button {
   font-size: 36px;
   margin: auto;
   text-align: center;
+  font-weight: 600;
 }
 
 .offerPagePoints__text {
@@ -1184,7 +1258,6 @@ a, button {
   height: 60px;
   margin-top: 15px;
   outline: none;
-  transition: .2s all;
 }
 
 .input:focus,
@@ -1297,6 +1370,17 @@ a, button {
 .d-mobile,
 .d-under-1200 {
   display: none;
+}
+
+.section--page {
+  margin-top: 40px !important;
+  margin-bottom: 175px !important;
+}
+
+@media(max-width: 768px) {
+  .section--page {
+    margin-bottom: 75px !important;
+  }
 }
 
 @media(max-width: 1650px) {
@@ -1531,10 +1615,6 @@ a, button {
 
   .faq__item__content {
     font-size: 13px;
-  }
-
-  .project__item__point {
-    /*transform: translateY(-22px);*/
   }
 }
 
@@ -1939,6 +2019,18 @@ a, button {
     max-width: 294px;
   }
 
+  .faq__item:nth-child(2) {
+    display: none;
+  }
+
+  .references__item {
+    min-height: 100px;
+  }
+
+  .section--projectTimeline {
+    margin-top: 125px;
+  }
+
   .siteHeader > .w {
     justify-content: space-between;
   }
@@ -2074,7 +2166,7 @@ a, button {
   }
 
   .sectionHeader--center > .sectionHeader__header {
-    max-width: 294px;
+    max-width: 268px;
   }
 
   .section__text {
@@ -2151,7 +2243,7 @@ a, button {
 
   .faq__item__content,
   .faq__item__header__title {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .faq__item__header__icon > .img {
@@ -2160,10 +2252,6 @@ a, button {
 
   .faq__item__header__icon > .img {
     width: 10px;
-  }
-
-  .faq__item:first-child .faq__item__content {
-    padding: 10px 0;
   }
 
   .faq__item__header {
@@ -2267,14 +2355,14 @@ a, button {
     background: #fff;
     z-index: 100;
     padding: 30px;
-    transform: scaleX(0);
-    transform-origin: top right;
+    transform: scaleY(0);
+    transform-origin: bottom left;
     transition: .3s all ease-in;
   }
 
   .mobileMenu > * {
     opacity: 0;
-    transition: .3s all ease-in;
+    transition: .2s all ease-in;
   }
 
   .mobileMenu__top__logo {
@@ -2329,8 +2417,6 @@ a, button {
   }
 
   .mobileMenu__content__item__submenu {
-    height: 0;
-    opacity: 0;
     transition: .3s all;
     overflow: hidden;
   }
@@ -2446,4 +2532,27 @@ a, button {
 
 @media(max-width: 576px) {
 
+}
+
+@media(min-width: 1800px) {
+  .offerPageContent__image {
+    width: 631px;
+    height: auto;
+  }
+
+  .offerPageContent {
+    gap: 35px;
+  }
+
+  .offerPageContent__content {
+    width: 100%;
+  }
+
+  .offerPageContent__content__block:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .offerPageContent__content__block__text {
+    margin-top: 20px;
+  }
 }

@@ -16,10 +16,10 @@ export default function Home() {
   return <>
     <SiteHeader menu={0} />
     <HeroSection />
-    <OfferSection />
+    <OfferSection page={false} />
     <UspSection />
     <TechStack />
-    <PortfolioSection />
+    <PortfolioSection page={false} />
     <ProjectTimeline />
     <References />
     <Faq />

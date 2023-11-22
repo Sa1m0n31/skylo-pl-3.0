@@ -201,27 +201,23 @@ const references = [
 const faq = [
     {
         question: 'Ile będzie kosztować mój projekt?',
-        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
+        answer: 'Każdą wycenę przygotowujemy indywidualnie i dostosowujemy ją do możliwości Klienta. Chcemy pomagać naszym Klientom rozwijać ich przedsięwzięcia, dlatego zawsze staramy się znaleźć rozwiązanie skrojone pod Twoje możliwości finansowe.'
     },
     {
-        question: 'Ile będzie kosztować mój projekt?',
-        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
+        question: 'Czy muszę się znać, żeby rozpocząć współpracę?',
+        answer: 'Absolutnie nie! Chcemy wykorzystać naszą wiedzę, doświadczenie i umiejętności, aby sprawnie przeprowadzić Cię przez cały proces tworzenia projektu. Dzięki temu możesz maksymalnie skupić się na swoim biznesie, a my dostarczymy Ci potrzebne instrumenty i rozwiązania.'
     },
     {
-        question: 'Ile będzie kosztować mój projekt?',
-        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
+        question: 'Jak długo muszę czekać na wykonanie usługi?',
+        answer: 'W zależności od poziomu rozbudowania projektu, czas realizacji może się oczywiście wydłużać. Jednak dzięki odpowiedniej organizacji pracy i doświadczeniu dostarczamy nasze projekty na czas. Terminy realizacji są uzgadniane zawsze przed rozpoczęciem prac - dzięki temu zawsze wiesz, na czym stoisz. Umowa zobowiązuje nas do terminowego wykonania usługi.'
     },
     {
-        question: 'Ile będzie kosztować mój projekt?',
-        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
+        question: 'Co wpływa na wycenę?',
+        answer: 'Na wartość realizacji usługi wpływa poziom jej zaawansowania. Stworzenie wydajnej, zaawansowanej technicznie i bezpiecznej aplikacji pochłania zdecydowanie więcej czasu niż zrealizowanie prostej wizytówkowej strony internetowej. Wycenie podlega czas, który trzeba poświęcić na zrealizowanie usługi, a także wiedza i umiejętności, które wykorzystujemy, aby dostarczać Wam rozwiązania najwyższej jakości.'
     },
     {
-        question: 'Ile będzie kosztować mój projekt?',
-        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
-    },
-    {
-        question: 'Ile będzie kosztować mój projekt?',
-        answer: 'Należy dobrze opisać każdą pozycję w sekcji USP, aby podkreślić nasze cechy, wartości i w jak największym stopniu przekonać do siebie klienta, wyrażając się w prostych słowach i komunikatach.'
+        question: 'Jak mogę umówić konsultację?',
+        answer: 'To bardzo krótka droga - możesz skorzystać z <a href="#darmowa-wycena">formularza kontaktowego</a>, gdzie możesz precyzyjnie wskazać nam, jakiej usługi potrzebujesz. Możesz także napisać do nas bezpośrednio na maila kontakt@skylo.pl, lub po prostu zadzwonić pod nr telefonu 697 099 402. Konsultacja jest całkowicie bezpłatna i niezobowiązująca, a my zawsze odpowiemy na nurtujące Cię pytania.'
     }
 ]
 
