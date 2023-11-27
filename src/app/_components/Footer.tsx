@@ -40,6 +40,10 @@ const Footer = () => {
                       className={'footer__colGroup__item__link'}>
                     Kontakt
                 </Link>
+                <Link href={'/polityka-prywatnosci'}
+                      className={'footer__colGroup__item__link'}>
+                    Polityka prywatności
+                </Link>
             </div>
 
             <div className={'footer__colGroup__item'}>

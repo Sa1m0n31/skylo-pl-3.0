@@ -8,5 +8,5 @@ export default function cloudinaryLoader({
     quality?: number
 }) {
     const params = ['f_auto', 'c_limit', `w_${width}`, `q_${quality || 'auto'}`]
-    return `http://test.skylo.pl/${src}`
+    return `https://skylo.pl/${src}`
 }

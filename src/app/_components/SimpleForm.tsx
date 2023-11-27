@@ -19,7 +19,7 @@ const SimpleForm = () => {
             const form = new FormData();
             form.append('email', value);
 
-            axios.post(`http://test.skylo.pl/send-email/`, form, {
+            axios.post(`https://skylo.pl/send-email/`, form, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -64,6 +64,12 @@ const SimpleForm = () => {
                            height={10}
                            alt={'wyślij'} />
                 </button>
+
+                <p className={'privacyPolicyCheck privacyPolicyCheck--simpleForm'}>
+                    Wysyłając formularz potwierdzasz akceptację naszej <a target={"_blank"}
+                                                                          rel={'noreferrer'}
+                                                                          href={'/polityka-prywatnosci'}>Polityki prywatności</a>
+                </p>
             </form> : <span className={'success success--simpleForm'}>
                 Dziękujemy za wiadomość! Skontaktujemy się najszybciej, jak to możliwe.
             </span>}

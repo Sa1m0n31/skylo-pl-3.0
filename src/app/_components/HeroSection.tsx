@@ -1,12 +1,23 @@
-import React from 'react';
+"use client";
+
+import React, {useEffect, useRef} from 'react';
 import mainImage from '../_img/main.png';
 import arrowIcon from '../_img/arrow-white.svg';
 import Image from "next/image";
 import Link from "next/link";
 
 const HeroSection = () => {
+    const leftRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if(leftRef.current) {
+            leftRef.current.style.opacity = '1';
+            leftRef.current.style.transform = 'translateY(0)';
+        }
+    }, [leftRef]);
+
     return <main className={'hero w flex'}>
-        <div className={'hero__left'}>
+        <div className={'hero__left'} ref={leftRef}>
             <span className={'hero__left__aboveHeader'}>
                 Software House Toruń i cała Polska
             </span>

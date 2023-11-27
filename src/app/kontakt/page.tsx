@@ -52,13 +52,12 @@ const Page = () => {
             form.append('budget', budgetList[budget]);
             form.append('message', message);
 
-            axios.post(`http://test.skylo.pl/send-form/`, form, {
+            axios.post(`https://skylo.pl/send-form/`, form, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             })
                 .then((res: any) => {
-                    console.log(res);
                     resetForm();
                     setLoading(false);
                     setSuccess(true);
@@ -112,6 +111,12 @@ const Page = () => {
                       placeholder={'Twoja wiadomość'}
                       value={message}
                       setValue={(e: any) => { setMessage(e.target.value); }} />
+
+            <p className={'privacyPolicyCheck'}>
+                Wysyłając formularz potwierdzasz akceptację naszej <a target={'blank'}
+                                                                      rel={'noreferrer'}
+                                                                      href={'/polityka-prywatnosci'}>Polityki prywatności</a>
+            </p>
 
             {!loading ? <button className={'btn btn--submitContactForm'}
                               ref={submitBtn}

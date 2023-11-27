@@ -169,8 +169,31 @@ a, button {
   }
 }
 
+.hero__loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  background: #fff;
+  transition: .2s all ease-in;
+  visibility: hidden;
+}
+
 .hero__left {
   width: 55%;
+  transition: .3s all ease-in;
+}
+
+@media(min-width: 769px) {
+  .hero__left {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }
 
 .hero__left__aboveHeader {
@@ -233,6 +256,7 @@ a, button {
 }
 
 .img--heroRight {
+  max-width: 500px;
   animation: moveUpDown 5s ease-in-out infinite;
 }
 
@@ -745,7 +769,7 @@ a, button {
 
 .section--simpleForm {
   background: #F8FAFD;
-  padding: 50px 0;
+  padding: 50px 0 80px;
   margin-top: 80px;
 }
 
@@ -772,6 +796,7 @@ a, button {
 }
 
 .simpleForm__form {
+  position: relative;
   width: 90%;
   max-width: 650px;
 }
@@ -1269,6 +1294,7 @@ a, button {
   height: 150px;
   resize: none;
   padding: 16px;
+  margin-bottom: 30px;
 }
 
 .selectBtn {
@@ -1324,6 +1350,7 @@ a, button {
 }
 
 .contactForm {
+  position: relative;
   margin-top: -25px;
   display: grid;
   align-items: center;
@@ -1377,9 +1404,72 @@ a, button {
   margin-bottom: 175px !important;
 }
 
+.main__header {
+  font-size: 32px;
+  margin: 30px 0;
+  font-weight: 600;
+}
+
+.main--localPage {
+  margin-bottom: 80px;
+}
+
+.main--localPage .main__text {
+  margin-top: -20px;
+}
+
+.privacyPolicyCheck {
+  font-weight: 400;
+  color: #717171;
+  width: 100%;
+  font-size: 14px;
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+}
+
+.privacyPolicyCheck a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.privacyPolicyCheck--simpleForm {
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  text-align: center;
+}
+
 @media(max-width: 768px) {
+  .input--textarea {
+    margin-bottom: 40px;
+  }
+
+  .privacyPolicyCheck {
+    bottom: 75px;
+  }
+
+  .privacyPolicyCheck--simpleForm {
+    bottom: -45px;
+  }
+
   .section--page {
     margin-bottom: 75px !important;
+  }
+
+  .main__header {
+    font-size: 21px;
+    margin: 15px 0;
+  }
+
+  .main__text {
+    font-size: 14px;
+  }
+
+  .privacyPolicyCheck {
+    font-size: 11px;
   }
 }
 
