@@ -1442,9 +1442,38 @@ a, button {
   text-align: center;
 }
 
+.main__text > ul {
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.main__text > ul > li {
+  padding-left: 15px;
+  position: relative;
+}
+
+.main__text > ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: var(--primary);
+}
+
+.sectionHeader--marginTop {
+  margin-top: 50px;
+}
+
 @media(max-width: 768px) {
   .input--textarea {
     margin-bottom: 40px;
+  }
+
+  .main--localPage .main__text {
+    text-align: center;
   }
 
   .privacyPolicyCheck {

@@ -2,6 +2,12 @@ import SiteHeader from "@/app/_components/SiteHeader";
 import Footer from "@/app/_components/Footer";
 import SimpleForm from "@/app/_components/SimpleForm";
 import OfferSection from "@/app/_components/OfferSection";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Najlepsze strony internetowe Wąbrzeźno',
+    description: 'Tworzenie stron internetowych Wąbrzeźno. W Skylo stworzymy oprogramowanie skrojone pod Ciebie!'
+}
 
 export default function RootLayout({
                                        children,

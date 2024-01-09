@@ -1,7 +1,12 @@
 import SiteHeader from "@/app/_components/SiteHeader";
 import Footer from "@/app/_components/Footer";
 import SimpleForm from "@/app/_components/SimpleForm";
-import OfferSection from "@/app/_components/OfferSection";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Najlepsze strony internetowe Rypin',
+    description: 'Tworzenie stron internetowych Rypin. W Skylo stworzymy oprogramowanie skrojone pod Ciebie!'
+}
 
 export default function RootLayout({
                                        children,
@@ -13,7 +18,6 @@ export default function RootLayout({
 
         {children}
 
-        <OfferSection page={true} />
         <SimpleForm />
         <Footer />
     </div>

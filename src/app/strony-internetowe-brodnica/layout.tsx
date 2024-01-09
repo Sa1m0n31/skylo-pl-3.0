@@ -1,7 +1,13 @@
 import SiteHeader from "@/app/_components/SiteHeader";
 import Footer from "@/app/_components/Footer";
 import SimpleForm from "@/app/_components/SimpleForm";
-import OfferSection from "@/app/_components/OfferSection";
+import {Metadata} from "next";
+import FAQ from "@/app/_components/FAQ";
+
+export const metadata: Metadata = {
+    title: 'Najlepsze strony internetowe Brodnica',
+    description: 'Tworzenie stron internetowych Brodnica. W Skylo stworzymy oprogramowanie skrojone pod Ciebie!'
+}
 
 export default function RootLayout({
                                        children,
@@ -13,7 +19,7 @@ export default function RootLayout({
 
         {children}
 
-        <OfferSection page={true} />
+        <FAQ />
         <SimpleForm />
         <Footer />
     </div>
